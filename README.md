@@ -131,5 +131,6 @@ Python, PySpark, Apache Spark, Spark Structured Streaming, Apache Kafka, Apache 
 Architecture design complete. This represents platform modernization strategy and architectural thinking. Not a running implementation.
 
 ## Author
-Sri Adilakshmi Marrivada Data Platform Architect | 19 Years Experience  
+**Sri Adilakshmi Marrivada**  
+Data Platform Architect | 19 Years Experience  
 [LinkedIn Profile](https://www.linkedin.com/in/sri-adilakshmi-marrivada-16a4779/)
