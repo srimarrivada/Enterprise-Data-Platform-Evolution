@@ -2,11 +2,17 @@
 **From On-Premises Batch to Cloud-Native Real-Time with Governance**
 
 ## About This Project
-This is a personal architecture design exercise created in 2025. It represents how I would modernize an enterprise HR data platform (similar to the one I own in production) through 4 evolutionary phases.
+This is a personal architecture design exercise created in 2025. It represents how I would modernize an enterprise HR data platform through four evolutionary phases — from on-premises batch processing to real-time hybrid architecture and finally to a cloud-native Azure Lakehouse.
 
-The phase dates (2021-2025) represent the hypothetical migration timeline — illustrating how each phase builds on the previous one over a realistic 4-year modernization journey. This is a design artifact demonstrating architectural thinking, not documentation of a running system.
+The phase dates (2021–2025) represent a hypothetical migration timeline, illustrating how each phase builds on the previous one over a realistic four-year modernization journey. This repository is a design artifact demonstrating architectural thinking, modernization strategy, and platform evolution patterns — not documentation of a running production system.
 
-**Context:** In my current production role, I own a 132-object platform on SQL Server + Azure Databricks serving 105K+ employees at a global Big 4 firm with zero data gaps for 6+ years. This design explores: _"What if I could rebuild this platform from scratch using modern data stack technologies, with a phased migration approach?"_
+## Context 
+This design is inspired by my architecture and production experience with large-scale HR data platforms involving SQL Server, Azure Databricks, Workday integrations, enterprise data integration, reconciliation controls, data quality frameworks, downstream consumers, and analytics enablement.
+
+In my current role, I contribute to architecture, integration design, performance optimization, and production reliability for a large-scale HR data platform serving 105K+ employees at a global Big 4 firm, with strong reconciliation controls and no sustained data gaps across 6+ years.
+
+This design explores the question:
+> What if I could rebuild an enterprise HR data platform from scratch using modern data stack technologies, with a phased migration approach?
 
 ## Architecture Phases
 
@@ -113,7 +119,7 @@ This diagram shows the complete data journey through the platform:
 10.	Cosmos DB replacing self-managed MongoDB — auto-scaling, wire-compatible, zero operational overhead
 
 ## How This Relates to My Production Experience
-In my current role, I own a 132-object production platform (SQL Server + Azure Databricks) serving 105,000+ employees at a global Big 4 firm with zero data gaps for 6+ years.
+In my current role, I contribute to architecture, integration design, performance optimization, and production reliability for a large-scale HR data platform across SQL Server and Azure Databricks, serving 105,000+ employees at a global Big 4 firm with strong reconciliation controls and no sustained data gaps across 6+ years.
 
 The production lessons that informed this design:
 * Zero-gap guarantee → inspired the reconciliation process in Phase 3
@@ -128,9 +134,10 @@ The production lessons that informed this design:
 Python, PySpark, Apache Spark, Spark Structured Streaming, Apache Kafka, Apache Airflow, HDFS, Hive, Parquet, Delta Lake, MongoDB, Cassandra, Redis, Flask, nginx, Azure Databricks, Azure Data Lake Storage Gen2, Azure Event Hub, Azure Cosmos DB, Unity Catalog, Tableau, Docker, ExpressRoute
 
 ## Status
-Architecture design complete. This represents platform modernization strategy and architectural thinking. Not a running implementation.
+Architecture design complete. This represents platform modernization strategy and architectural thinking, not a running production implementation.
 
 ## Author
 **Sri Adilakshmi Marrivada**  
 Data Platform Architect | 19 Years Experience  
-[LinkedIn Profile](https://www.linkedin.com/in/sri-adilakshmi-marrivada-16a4779/)
+Lead Consultant | Data Platform Architect | 19+ Years Experience  
+[LinkedIn Profile](https://www.linkedin.com/in/sri-adilakshmi-marrivada)
