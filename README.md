@@ -24,7 +24,7 @@ This design explores the question:
 | **Phase 4** | Year 4 | Cloud-Native + Governance | Azure (ADLS Gen2, Databricks, Event Hub, Cosmos DB), Delta Lake (MERGE SCD2, Z-ORDER), Unity Catalog, Domain Data Products, Managed Airflow |
 
 ## Phase 1: Batch Data Lake Architecture
-![Phase1_Batch_Data_Lake_Architecture](Phase1_Batch_Data_Lake_Architecture.png)
+![Phase1_Batch_Data_Lake_Architecture](diagrams/Phase1_Batch_Data_Lake_Architecture.png)
 
 **Key Design Decisions:**
 * YAML-driven extraction framework (configuration over code for source onboarding)
@@ -33,7 +33,7 @@ This design explores the question:
 * Apache Airflow orchestration (17 DAGs, YAML-driven, SLA 5:30 AM)
 
 ## Phase 2: Multi-Source HR Analytics Platform
-![Phase2_Multi_Source_Analytics_Architecture](Phase2_Multi_Source_Analytics_Architecture.png)
+![Phase2_Multi_Source_Analytics_Architecture](diagrams/Phase2_Multi_Source_Analytics_Architecture.png)
 
 **Key Design Decisions:**
 * Master Person Index with 4-pass identity resolution (exact 95% → email 3% → fuzzy 1.5% → manual 0.5%)
@@ -44,7 +44,7 @@ This design explores the question:
 * ServiceNow integration for onboarding automation
 
 ## Phase 3: Real-Time HR Event Processing (Lambda Architecture)
-![Phase3_Real-Time_Hybrid_Lambda_Architecture](Phase3_Real-Time_Hybrid_Lambda_Architecture.png)
+![Phase3_Real-Time_Hybrid_Lambda_Architecture](diagrams/Phase3_Real-Time_Hybrid_Lambda_Architecture.png)
 
 **Key Design Decisions:**
 * Lambda Architecture: Batch (truth/complete) + Speed (low-latency) with explicit reconciliation
@@ -60,7 +60,7 @@ This design explores the question:
 **Why emp_id as Kafka partition key:** All events for one employee (hire → job_change → comp_change) must be processed IN ORDER. Same partition = ordering guarantee.
 
 ## Phase 4: Cloud-Native + Governance Data Platform (Lakehouse)
-![Phase4_Fully_Cloud_Native_with_Governance_Architecture](Phase4_Fully_Cloud_Native_with_Governance_Architecture.png)
+![Phase4_Fully_Cloud_Native_with_Governance_Architecture](diagrams/Phase4_Fully_Cloud_Native_with_Governance_Architecture.png)
 
 **Key Design Decisions:**
 * Everything on Azure (ADLS Gen2 + Databricks + Event Hub + Cosmos DB)
@@ -80,7 +80,7 @@ This design explores the question:
 * Comprehensive audit logging
 
 ## Evolution Summary
-![Architecture_Evolution_Summary](Architecture_Evolution_Summary.png)
+![Architecture_Evolution_Summary](diagrams/Architecture_Evolution_Summary.png)
 
 | Dimension | Phase 1 | Phase 2 | Phase 3 | Phase 4 |
 | :--- | :--- | :--- | :--- | :--- |
@@ -95,7 +95,7 @@ This design explores the question:
 | **Cost** | Informatica (High) | On-Prem Hadoop (Moderate) | Hybrid (Model-High) | Azure Auto-Scaling (30-35% Reduction) |
 
 ## End-to-End Data Flow: Source to Consumption
-![End-to-End_Data_Flow](End-to-End_Data_Flow.png)
+![End-to-End_Data_Flow](diagrams/End-to-End_Data_Flow.png)
  
 This diagram shows the complete data journey through the platform:
 * **Ingestion:** Workday SOAP API via Python (requests/zeep)
@@ -136,8 +136,10 @@ Python, PySpark, Apache Spark, Spark Structured Streaming, Apache Kafka, Apache 
 ## Status
 Architecture design complete. This represents platform modernization strategy and architectural thinking, not a running production implementation.
 
+## Confidentiality Note
+This repository contains only sanitized, generic architecture designs created for portfolio purposes. It does not include proprietary client documentation, confidential data, production code, internal system names, credentials, or real employee/customer data.
+
 ## Author
 **Sri Adilakshmi Marrivada**  
-Data Platform Architect | 19 Years Experience  
 Lead Consultant | Data Platform Architect | 19+ Years Experience  
 [LinkedIn Profile](https://www.linkedin.com/in/sri-adilakshmi-marrivada)
